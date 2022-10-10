@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caa-chi-pun</title>
+    <style>
+      body {
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      #rock, #paper, #scissor {
+        background-color: black;
+        width: 90px;
+        height: 90px;
+        color: white;
+        cursor: pointer;
+        border-radius: 100px;
+      }
+      #rock:hover {
+        background-color: wheat;
+        color: #000;
+        font-weight: bold;
+      }
+      
+      #paper:hover {
+        background-color: wheat;
+        color: #000;
+        font-weight: bold;
+      }
+      #scissor:hover {
+      background-color: wheat;
+      color: #000;
+      font-weight: bold;
+      }
+     #life {
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+      }
+      #life-player, #life-en {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        border-radius: 100px;
+        color: white;
+      }
+      #play-again {
+        background-color: black;
+        padding: 20px 0;
+        font-weight: bold;
+        width: 100%;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #play-again:hover {
+        background-color: wheat;
+        color: #000;
+      }
+      h3 {
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+      }
+    </style>
+  </head>
+  <body>
+      <header>
+        <h1>Caa - chii - pun</h1>
+      </header>
+
+      <section class="content1">
+        <h2>Que elijes?</h2>
+        <button id="rock">Piedra</button>
+        <button id="paper">Papel</button>
+        <button id="scissor">Tijera</button>
+      </section>
+
+      <section class="content2">
+        <div id="election"></div>
+        <div id="msj">
+        <div id="life">
+          <div id="life-player">0 <br> Tu</div>
+          <h3>Triunfos</h3>
+          <div id="life-en">0 <br> Pc</div>
+        </div>
+      </section>
+
+      <button id="play-again">Empezar otravez</button>
+      
+  </body>
+  <script>
+    let player = 0;
+    let rival = 0;
+    let user; 
+    let pc;
+    let min = 1;
+    let max = 3;
+    let resultado
+
+    const rock = document.getElementById('rock');
+    const paper = document.getElementById('paper');
+    const scissor = document.getElementById('scissor');
+
+    rock.addEventListener("click", rocaa);
+    paper.addEventListener("click", papelote);
+    scissor.addEventListener("click", tijerota);
+
+    const yo = document.getElementById("election");
+    const mensaje = document.getElementById("msj");
+    const lifePlayer = document.getElementById('life-player');
+    const lifeRival = document.getElementById('life-en');
+    const reinicio = document.getElementById('play-again');
+
+    reinicio.addEventListener('click', btnPlay)
+
+    function rocaa() {
+      user = 'Piedra'
+      oponente()
+
+    }
+    function papelote() {
+      user = 'Papel'
+      oponente()
+    }
+    function tijerota() {
+      user = 'Tijera'
+      oponente()
+    }
+    function oponente() {
+      let pcA = aleatorio(1,3)
+      if (pcA == 1) {
+        pc = 'Piedra'
+      } else if (pcA == 2) {
+        pc = 'Papel'
+      } else {
+        pc = 'Tijera'
+      }
+      triunfo()
+
+      resultGame()
+
+    }
+    function triunfo() {
+      if (user == pc) {
+        resultado = 'Empate'
+      } else if (user == 'Piedra' && pc == 'Tijera') {
+        resultado = 'Ganaste'
+        player++
+        lifePlayer.innerHTML = player
+        } else if (user == 'Papel' && pc == 'Piedra') {
+        resultado = 'Ganaste'
+                player++
+        lifePlayer.innerHTML = player
+
+        } else if (user == 'Tijera' && pc == 'Papel') {
+        resultado = 'Ganaste'
+                player++
+        lifePlayer.innerHTML = player
+
+        }  else {
+        resultado = 'Perdiste'
+                rival++
+         lifeRival.innerHTML = rival
+
+        } 
+    }
+
+    function resultGame() {
+      let parrafo = document.createElement('h4')
+      parrafo.innerHTML = user + ' vs '+ pc + ' = '+resultado
+      yo.appendChild(parrafo)
+    }
+    function btnPlay() {
+      location.reload()
+    }
+
+    function aleatorio(min,max){
+      return Math.floor(Math.random() * (max-min+1)+min)
+    }
+  </script>
+</html>
