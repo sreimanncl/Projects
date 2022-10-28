@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        #app {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        form {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .buttons {
+            width: 75px;
+            height: 60px;
+            font-size: 22px;
+            border: black solid 1px;
+            border-radius: 10px;
+        }
+        .buttons:hover {
+            background-color: rgb(51, 184, 179);
+        }
+        .display  {
+            width: 100%;
+            height: 30%;
+            font-size: 40px;
+            margin-bottom: 10px;
+            text-align: end;
+        }
+        .operador {
+            background-color: rgb(53, 147, 230);
+        }
+        .eval {
+            background-color: rgb(175, 212, 245);
+        }
+        .button-r {
+            width: 155px;
+            background-color: gray;
+            box-shadow: ;
+        }
+        .button-d {
+            background-color: rgb(141, 191, 235);
+            width: 153px;
+        }
+    </style>
+</head>
+<body>
+    <section id="app">
+        <form name="calculator">
+            <input class="display" type="textfield" name="num" placeholder="7x7" value="" autocapitalize="off" readonly>
+            <br>
+
+            <input class="buttons" type="button" value="7" onclick="document.calculator.num.value+='7'">
+            <input class="buttons" type="button" value="8" onclick="document.calculator.num.value+='8'">
+            <input class="buttons" type="button" value="9" onclick="document.calculator.num.value+='9'">
+            <input class="buttons operador" type="button" value="+" onclick="document.calculator.num.value+='+'">
+            <br>
+            
+            <input class="buttons" type="button" value="4" onclick="document.calculator.num.value+='4'">
+            <input class="buttons" type="button" value="5" onclick="document.calculator.num.value+='5'">
+            <input class="buttons" type="button" value="6" onclick="document.calculator.num.value+='6'">
+            <input class="buttons operador" type="button" value="-" onclick="document.calculator.num.value+='-'">
+            <br>
+
+            <input class="buttons" type="button" value="1" onclick="document.calculator.num.value+='1'">
+            <input class="buttons" type="button" value="2" onclick="document.calculator.num.value+='2'">
+            <input class="buttons" type="button" value="3" onclick="document.calculator.num.value+='3'">
+            <input class="buttons operador" type="button" value="x" onclick="document.calculator.num.value+='*'">
+            <br>
+            <input class="buttons" type="button" value="." onclick="document.calculator.num.value+='.'">
+            <input class="buttons" type="button" value="0" onclick="document.calculator.num.value+='0'">
+            <input class="buttons eval " type="button" value="=" onclick="document.calculator.num.value=eval(document.calculator.num.value)">
+            <input class="buttons operador" type="button" value="/" onclick="document.calculator.num.value+='/'">
+            <br>
+            <input class="buttons button-r" type="reset" value="Reset">
+            <!-- <input class="buttons button-d" type="range" value="Borrar"> -->
+        </form>
+    </section>
+</body>
+</html>
