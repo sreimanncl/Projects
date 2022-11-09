@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Batalla pokemon</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile-horizontal.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="content1">
+        <div class="ball1">
+            <div class="ball"></div>
+        </div>
+        <h1>Batalla pokemon</h1>
+        <h2 class="emojis">🔥 💦 🍃</h2>
+        <button id="start">Empezar</button>
+    </section>
+    <section id="content1-2">
+        <h2 class="tname">Como te llamas?</h2>
+        <form id="form-name">
+
+            <label id="saludo"></label>
+            <input class="input-name" type="text" value="" placeholder="Sebastian..."  />
+            <input class="input-submit" type="submit" value="Listo">
+        </form>
+        <button id="btn-next">Siguiente</button>
+                
+    </section>
+   
+    <section id="content2">        
+        <h2 class="subtitle">Elige tu pokemon</h2>
+        <p>Con que pokemon quieres empezar <span id="name2"></span></p>
+        <section id="select-pokemon"></section>
+        <button id="btn">Seleccionar</button>
+    </section>
+
+    <section id="content3">
+        <h2 class="title-atack">combate
+        </h2>
+
+        <div class="vidas">
+          <p class="mi-pke">
+            <span id="mio" class="mio"></span>
+            <br>
+            <span id="mivida" class="mivida"></span>
+            </p>
+          <p class="rival-pke">
+            <span id="rival" class="rival"></span>
+            <br>
+            <span id="vidarival"  class="vidarival"></span>
+        </p>
+        </div>    
+        <div id="contenedor-ataques" class="ataques"></div>
+        <div id="msj"></div>
+        <div id="reiniciar">
+        <button id="boton-reiniciar" class="btn-re">Reiniciar</button>
+        </div>
+    </section>
+    <script src="./conten1.js"></script>
+    <script src="./pokemones.js"></script>
+    <script src='./game.js'></script>
+</body>
+</html>

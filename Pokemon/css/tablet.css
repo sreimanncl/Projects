@@ -1,0 +1,46 @@
+@media (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+    .subtitle {
+        font-size: 40px;
+    }    
+    #select-pokemon {
+        justify-content: center;
+        flex-direction: row;
+    }
+    label {
+        width: 230px;
+        height: 250px;
+    }    
+    label img {
+        width: 200px;
+        height: 200px;
+    }
+    #btn {
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .title-atack {
+        font-size: 40px;
+    }
+    .mi-pke, .rival-pke {
+        width: 200px;
+        font-size: 20px;
+        height: 200px;
+    }
+    .ataques  {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .ataques button {
+        width: 200px;
+        font-size: 20px;
+    }
+    #reiniciar button {
+        width: 200px;
+        font-size: 20px;
+    }
+}

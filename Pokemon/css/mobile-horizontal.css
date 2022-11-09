@@ -1,0 +1,33 @@
+@media (min-width: 480px) {
+    #select-pokemon {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    label {
+        width: 120px;
+
+    }    
+    #btn {
+        width: 200px;
+        font-size: 15px;
+    }
+    .mi-pke, .rival-pke {
+        width: 120px;
+        font-size: 14px;
+        height: 200px;
+    }
+    .ataques  {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .ataques button {
+        width: 120px;
+        font-size: 15px;
+    }
+    #reiniciar button {
+        width: 200px;
+        font-size: 14px;
+    }
+}
